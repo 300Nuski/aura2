@@ -1,0 +1,291 @@
+{
+  "project_meta": {
+    "title": "AURA ROYALE / FIERY DARK CASINO DASHBOARD REDESIGN",
+    "version": "2.0.0",
+    "theme": "Dark Cyber-Esports Gaming Casino Dashboard",
+    "language": "de-DE",
+    "reference_design": "fiery.gg aesthetic (Dark Navy Obsidian canvas, 3-column app layout: Left Icon Sidebar + Center Bento Stage + Right Live Chat + Topbar with Emerald CTA + Esports Match Carousel + Live Bet/Whale Wins ticker)",
+    "target_framework": "React (JavaScript .jsx / .js) + Tailwind CSS + Framer Motion + Lucide Icons + Sonner"
+  },
+  "typography": {
+    "primary_font": "Plus Jakarta Sans, sans-serif",
+    "display_heading_font": "Outfit, Clash Display, sans-serif",
+    "mono_numeric_font": "JetBrains Mono, monospace",
+    "hierarchy": {
+      "h1_hero": "text-3xl sm:text-4xl lg:text-5xl font-black tracking-tight text-white uppercase",
+      "h2_section": "text-xl sm:text-2xl font-bold tracking-tight text-slate-100 flex items-center gap-2",
+      "h3_card_title": "text-lg sm:text-xl font-bold text-white tracking-wide",
+      "h4_game_label": "text-sm sm:text-base font-semibold text-slate-200",
+      "body_regular": "text-sm text-slate-400 leading-relaxed",
+      "caption_meta": "text-xs font-mono text-slate-400 uppercase tracking-wider",
+      "numeric_balance": "font-mono font-bold text-emerald-400 tracking-tight",
+      "odds_badge": "font-mono font-bold text-amber-300 text-xs px-2 py-0.5 rounded bg-amber-400/10 border border-amber-400/20"
+    },
+    "font_imports": "@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@500;600;700;800;900&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=JetBrains+Mono:wght@500;600;700;800&display=swap');"
+  },
+  "colors": {
+    "dark_tokens": {
+      "background_obsidian": "#0A0C10",
+      "surface_base": "#0E1015",
+      "surface_card": "#151821",
+      "surface_card_hover": "#1C202C",
+      "surface_elevated": "#222634",
+      "surface_border": "#262C3D",
+      "surface_border_subtle": "#1B202E",
+      "sidebar_bg": "#0B0D12",
+      "chat_panel_bg": "#0E1117",
+      "topbar_bg": "rgba(14, 16, 21, 0.85)"
+    },
+    "brand_accents": {
+      "deposit_emerald": "#00E575",
+      "deposit_emerald_hover": "#00FF83",
+      "deposit_emerald_glow": "rgba(0, 229, 117, 0.35)",
+      "pvp_cyan_blue": "#2E7CFF",
+      "jackpot_purple": "#8C3BFF",
+      "slots_amber_gold": "#FF9F1C",
+      "crash_orange_red": "#FF4757",
+      "cases_teal": "#00D2D3",
+      "roulette_ruby": "#E84118",
+      "live_red": "#FF3838"
+    },
+    "text_contrast": {
+      "text_primary": "#FFFFFF",
+      "text_secondary": "#94A3B8",
+      "text_muted": "#64748B",
+      "text_dimmed": "#475569"
+    }
+  },
+  "layout_architecture": {
+    "mode": "3-Column Gaming Command Center with Topbar and Bento Hub",
+    "structure": {
+      "topbar": {
+        "height": "h-16 md:h-20",
+        "fixed": true,
+        "classes": "fixed top-0 left-0 right-0 z-40 bg-[#0E1015]/90 backdrop-blur-xl border-b border-[#222634] px-4 md:px-6 flex items-center justify-between",
+        "elements": [
+          "Logo (AURA ROYALE / FIERY Flame Icon + Bold Typography)",
+          "Navigation Pills (Lobby, Arena Spiele, Matches & Wetten, Rangliste, Belohnungen)",
+          "User Coins Counter: '1.561 G'",
+          "Primary CTA: '+ Einzahlen' (Bright Emerald Button with pulsating aura)",
+          "Quick Bonus Icon / Notification Bell",
+          "User Profile Avatar with Level 42 Badge"
+        ]
+      },
+      "left_icon_sidebar": {
+        "width": "w-16 md:w-20",
+        "fixed": true,
+        "classes": "hidden sm:flex flex-col items-center fixed top-20 left-0 bottom-0 z-30 bg-[#0B0D12] border-r border-[#1E2330] py-4 gap-3",
+        "categories": [
+          { "id": "all", "label": "Lobby", "icon": "Gamepad2" },
+          { "id": "roulette", "label": "Roulette", "icon": "Disc" },
+          { "id": "blackjack", "label": "Blackjack", "icon": "Layers" },
+          { "id": "jackpot", "label": "Jackpot", "icon": "Trophy" },
+          { "id": "slots", "label": "Slots", "icon": "Sparkles" },
+          { "id": "crash", "label": "Crash", "icon": "Rocket" },
+          { "id": "cases", "label": "Cases", "icon": "Package" },
+          { "id": "matches", "label": "Esports", "icon": "Swords" }
+        ]
+      },
+      "center_main_stage": {
+        "margins": "sm:pl-20 xl:pr-80 pt-20 pb-16 min-h-screen",
+        "sections": [
+          {
+            "id": "hero_banner",
+            "type": "VIP Daily Drop / Welcome Banner with Countdown and Claim Button"
+          },
+          {
+            "id": "bento_game_grid",
+            "type": "Asymmetric Tetris Bento Grid (PvP 8-ball/Bomb, Roulette Arena, Blackjack Club, Jackpot Pool, Slots Mega Spin, Rocket Crash, Unbox Cases)"
+          },
+          {
+            "id": "active_arena",
+            "type": "Dedicated Interactive Game Theater for SVG European Roulette & Interactive Blackjack"
+          },
+          {
+            "id": "top_matches_carousel",
+            "type": "Esports Live Odds Cards (Counter-Strike 2, Valorant Champions, EA Sports FC 24)"
+          },
+          {
+            "id": "top_slots_strip",
+            "type": "Horizontal Carousel of Popular Featured Slots with dynamic RTP and instant demo triggers"
+          },
+          {
+            "id": "live_feed_ticker_table",
+            "type": "Tabbed Live Bets / Lucky Wins / Whale Wins Table with real-time payout simulator"
+          }
+        ]
+      },
+      "right_chat_panel": {
+        "width": "w-80",
+        "classes": "hidden xl:flex flex-col fixed top-20 right-0 bottom-0 z-30 bg-[#0E1117] border-l border-[#1E2330]",
+        "features": [
+          "Online Players Count Header with Green Pulse (z.B. '2.842 Online')",
+          "Message Feed with VIP Badges, Avatars, Level tags, Game Win Shoutouts",
+          "Interactive Chat Input Box with Emoji selector simulation & Send button",
+          "Toggle button for mobile/tablet drawer view"
+        ]
+      }
+    }
+  },
+  "bento_grid_specifications": {
+    "grid_classes": "grid grid-cols-1 md:grid-cols-6 lg:grid-cols-12 gap-4 my-6",
+    "cards": [
+      {
+        "id": "card-pvp",
+        "col_span": "col-span-12 md:col-span-6 lg:col-span-7",
+        "row_span": "row-span-1",
+        "title": "PVP BATTLE ARENA",
+        "subtitle": "1v1 & 2v2 Live Duelle",
+        "accent_color": "from-blue-600/30 via-indigo-900/40 to-[#151821]",
+        "border_color": "border-blue-500/40",
+        "badge": "24 AKTIVE DUELLE",
+        "badge_color": "bg-blue-500/20 text-blue-400 border-blue-500/30",
+        "cta": "Jetzt Duellieren",
+        "icon": "Flame"
+      },
+      {
+        "id": "card-roulette",
+        "col_span": "col-span-12 md:col-span-3 lg:col-span-5",
+        "row_span": "row-span-1",
+        "title": "ROYALE ROULETTE",
+        "subtitle": "Klassisches Kesselspiel 36x",
+        "accent_color": "from-rose-600/30 via-red-950/40 to-[#151821]",
+        "border_color": "border-rose-500/40",
+        "badge": "SPIELBAR IM BROWSER",
+        "badge_color": "bg-rose-500/20 text-rose-300 border-rose-500/30",
+        "cta": "Tisch Öffnen",
+        "action": "open_roulette"
+      },
+      {
+        "id": "card-jackpot",
+        "col_span": "col-span-12 md:col-span-3 lg:col-span-4",
+        "title": "MEGA JACKPOT",
+        "subtitle": "Pool: 148.920 €",
+        "accent_color": "from-purple-600/30 via-purple-950/40 to-[#151821]",
+        "border_color": "border-purple-500/40",
+        "badge": "TIMER: 00:42",
+        "badge_color": "bg-purple-500/20 text-purple-300 border-purple-500/30",
+        "cta": "Ticket Kaufen"
+      },
+      {
+        "id": "card-blackjack",
+        "col_span": "col-span-12 md:col-span-3 lg:col-span-4",
+        "title": "BLACKJACK 21 VIP",
+        "subtitle": "Dealer Schlagen & Split",
+        "accent_color": "from-emerald-600/30 via-emerald-950/40 to-[#151821]",
+        "border_color": "border-emerald-500/40",
+        "badge": "LIVE DEALER ENGINE",
+        "badge_color": "bg-emerald-500/20 text-emerald-300 border-emerald-500/30",
+        "cta": "Karten Geben",
+        "action": "open_blackjack"
+      },
+      {
+        "id": "card-crash",
+        "col_span": "col-span-12 md:col-span-3 lg:col-span-4",
+        "title": "ROCKET CRASH",
+        "subtitle": "Multiplikator bis 1000x",
+        "accent_color": "from-amber-600/30 via-orange-950/40 to-[#151821]",
+        "border_color": "border-amber-500/40",
+        "badge": "LETZTER CRASH: 24.8x",
+        "badge_color": "bg-amber-500/20 text-amber-300 border-amber-500/30",
+        "cta": "Rakete Starten"
+      }
+    ]
+  },
+  "mini_games_integration": {
+    "philosophy": "Mini-games must be embedded seamlessly into the dark command-center aesthetic without losing their high-fidelity state logic.",
+    "roulette": {
+      "container_theme": "Obsidian backdrop, deep crimson & golden wheel highlights, sleek neon bet buttons, chip selector with glowing halo",
+      "controls": "Schnellwette 10, 50, 100, 500, Max; Farb- & Zahlenwetten; Spin-Button mit Haptik-Animation",
+      "testids": ["roulette-wheel", "roulette-spin-btn", "roulette-chip-10", "roulette-chip-50", "roulette-chip-100", "roulette-balance-display", "roulette-history-pills"]
+    },
+    "blackjack": {
+      "container_theme": "Felt dark emerald table surface #0D2818 with gold foil borders, crisp card flip animations, score counters with status glow",
+      "controls": "Austeilen (Deal), Karte (Hit), Halten (Stand), Verdoppeln (Double), Neuer Tisch",
+      "testids": ["blackjack-deal-btn", "blackjack-hit-btn", "blackjack-stand-btn", "blackjack-player-score", "blackjack-dealer-score", "blackjack-streak-counter"]
+    }
+  },
+  "esports_and_slots_data": {
+    "matches": [
+      {
+        "id": "m1",
+        "game": "Counter-Strike 2",
+        "tournament": "ESL Pro League",
+        "teamA": "Natus Vincere",
+        "teamB": "FaZe Clan",
+        "oddsA": "1.74",
+        "oddsB": "2.12",
+        "status": "LIVE - MAP 2",
+        "score": "11 - 9",
+        "badge_color": "bg-red-500"
+      },
+      {
+        "id": "m2",
+        "game": "Valorant",
+        "tournament": "VCT Masters",
+        "teamA": "Fnatic",
+        "teamB": "Sentinels",
+        "oddsA": "1.88",
+        "oddsB": "1.95",
+        "status": "STARTET IN 14 MIN",
+        "score": "VS",
+        "badge_color": "bg-amber-500"
+      },
+      {
+        "id": "m3",
+        "game": "EA FC 24",
+        "tournament": "World Finals",
+        "teamA": "Umut",
+        "teamB": "Vejrgang",
+        "oddsA": "2.05",
+        "oddsB": "1.78",
+        "status": "LIVE - 2. HÄLFTE",
+        "score": "3 - 2",
+        "badge_color": "bg-red-500"
+      }
+    ],
+    "slots": [
+      { "name": "Gates of Olympus", "provider": "Pragmatic", "rtp": "96.50%", "multiplier": "5000x", "tag": "HOT" },
+      { "name": "Sweet Bonanza", "provider": "Pragmatic", "rtp": "96.48%", "multiplier": "21100x", "tag": "FEATURE" },
+      { "name": "Book of Dead", "provider": "Play'n GO", "rtp": "96.21%", "multiplier": "5000x", "tag": "CLASSIC" },
+      { "name": "Razor Shark", "provider": "Push Gaming", "rtp": "96.70%", "multiplier": "50000x", "tag": "HIGH VOL" },
+      { "name": "San Quentin", "provider": "Nolimit City", "rtp": "96.03%", "multiplier": "150000x", "tag": "EXTREME" }
+    ]
+  },
+  "live_bets_table_spec": {
+    "tabs": ["Live Wetten", "Glückssträhnen", "Whale Gewinne (10k+)"],
+    "columns": ["Spiel", "Benutzer", "Uhrzeit", "Einsatz", "Multiplikator", "Auszahlung"],
+    "simulation": "Automatischer sanfter Ticker fügt alle 3.5 Sekunden realistische Community-Wins ein"
+  },
+  "deposit_bonus_modal_spec": {
+    "trigger": "Topbar '+ Einzahlen' Button & Banner 'Bonus Einlösen' CTA",
+    "features": [
+      "Sofort-Gutschrift Simulation: 100% Willkommensbonus bis zu 1.000 € + 200 Freispiele",
+      "Kopierbarer Gutschein-Code 'AURA2026' oder 'FIERY100'",
+      "Krypto- & Sofort-Methoden Icons (Bitcoin, Ethereum, USDT, Apple Pay, Visa, Sofort)",
+      "Zahlungsabwicklung mit Bestätigungs-Toast via Sonner"
+    ]
+  },
+  "motion_and_interactions": {
+    "lenis_scrolling": "Smooth momentum scrolling enabled with Lerp 0.08",
+    "card_hover": "transform: translateY(-4px), transition: transform 0.25s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.25s ease, border-color 0.25s ease",
+    "glowing_borders": "Subtle radiant borders on hover matching category accent colors",
+    "live_indicator": "CSS pulse animation for 'LIVE' red dots and 'ONLINE' green indicators",
+    "chat_stagger": "AnimatePresence initial: { opacity: 0, y: 10 }, animate: { opacity: 1, y: 0 }, exit: { opacity: 0 }"
+  },
+  "image_assets": {
+    "esports_match_cs": "https://images.unsplash.com/photo-1542751371-adc38448a05e?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NjAxODF8MHwxfHNlYXJjaHwxfHxlc3BvcnRzJTIwZ2FtaW5nJTIwdG91cm5hbWVudCUyMG1hdGNofGVufDB8fHx8MTc4ODA4NTMyMHww&ixlib=rb-4.1.0&q=85",
+    "esports_match_val": "https://images.unsplash.com/photo-1558008258-7ff8888b42b0?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NjAxODF8MHwxfHNlYXJjaHwyfHxlc3BvcnRzJTIwZ2FtaW5nJTIwdG91cm5hbWVudCUyMG1hdGNofGVufDB8fHx8MTc4ODA4NTMyMHww&ixlib=rb-4.1.0&q=85",
+    "slot_cover_neon": "https://images.unsplash.com/photo-1604028296525-8304e1a4969f?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NjY2NzV8MHwxfHNlYXJjaHwyfHxuZW9uJTIwY2FzaW5vJTIwbmVvbiUyMHNsb3QlMjBsaWdodHN8ZW58MHx8fHwxNzg4MDg1MzI1fDA&ixlib=rb-4.1.0&q=85",
+    "avatar_user_1": "https://images.unsplash.com/flagged/photo-1579451443170-44b3963c3341?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NDQ2Mzl8MHwxfHNlYXJjaHwxfHxnYW1lciUyMGF2YXRhciUyMHBvcnRyYWl0JTIwY3liZXJwdW5rfGVufDB8fHx8MTc4ODA4NTMyOXww&ixlib=rb-4.1.0&q=85",
+    "avatar_user_2": "https://images.unsplash.com/photo-1698647861553-54943df8212b?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NDQ2Mzl8MHwxfHNlYXJjaHwyfHxnYW1lciUyMGF2YXRhciUyMHBvcnRyYWl0JTIwY3liZXJwdW5rfGVufDB8fHx8MTc4ODA4NTMyOXww&ixlib=rb-4.1.0&q=85",
+    "avatar_user_3": "https://images.unsplash.com/photo-1559828801-04565cd31e27?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NDQ2Mzl8MHwxfHNlYXJjaHwzfHxnYW1lciUyMGF2YXRhciUyMHBvcnRyYWl0JTIwY3liZXJwdW5rfGVufDB8fHx8MTc4ODA4NTMyOXww&ixlib=rb-4.1.0&q=85"
+  },
+  "UNIVERSAL_GUIDELINES_FOR_MAIN_AGENT": {
+    "color_discipline": "NO muddy washed-out gray. Use Deep Obsidian (#0A0C10) as body background and rich Dark Navy (#0E1015 / #151821) for cards. High contrast text (#FFFFFF, #94A3B8).",
+    "cta_contrast": "Deposit and key action buttons must use vibrant emerald green (#00E575) with crisp hover effects and high readability.",
+    "layout_integrity": "The 3-column system must adapt smoothly: on desktop full 3-column with left icon bar and right chat; on tablet right chat collapses into toggleable sidebar; on mobile responsive single-column feed with bottom nav.",
+    "state_management": "Ensure Roulette and Blackjack balance syncs with the Topbar balance so winning in mini-games updates the top counter with animation.",
+    "testing_readiness": "Every button, input, tab, card, and modal MUST contain semantic data-testid tags."
+  }
+}

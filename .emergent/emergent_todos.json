@@ -1,0 +1,38 @@
+[
+  {
+    "content": "Phase 1: Canvas-basierter Crash-Renderer (POC) – glatte Kurve, Strahl bleibt verankert, Rakete ohne Wackeln, Crash-FX",
+    "status": "completed"
+  },
+  {
+    "content": "Phase 1: POC per Screenshots bei t≈6s/12s/18s verifizieren",
+    "status": "completed"
+  },
+  {
+    "content": "Phase 2: design_agent für neues Design-System aufrufen",
+    "status": "completed"
+  },
+  {
+    "content": "Phase 2: Backend erweitern (rounds/recent, leaderboard, chat, wallet/deposit, me/stats)",
+    "status": "completed"
+  },
+  {
+    "content": "Phase 2: Frontend Redesign Shell + Lobby (nur funktionierende Links, Live-Feed + Leaderboard echt)",
+    "status": "completed"
+  },
+  {
+    "content": "Phase 2: Neue Spiele Dice, Mines, Coinflip",
+    "status": "completed"
+  },
+  {
+    "content": "Phase 2: Bestehende Spiele/Seiten (Roulette, Blackjack, Sweet Bonanza, Admin, Auth, Deposit, Chat, Profil) im neuen Design",
+    "status": "completed"
+  },
+  {
+    "content": "Phase 2: Alle User Stories abgedeckt + E2E Testing mit testing_agent",
+    "status": "in_progress"
+  },
+  {
+    "content": "Phase 3: Polish, PRD aktualisieren, ?crashAt Dev-Override entfernen",
+    "status": "pending"
+  }
+]
